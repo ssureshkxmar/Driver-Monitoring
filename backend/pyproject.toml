@@ -1,0 +1,29 @@
+[project]
+name = "manobela-backend"
+version = "0.1.0"
+description = "Backend for Manobela"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp[speedups]>=3.13.3",
+    "aiortc>=1.14.0",
+    "fastapi[standard]>=0.128.0",
+    "mediapipe>=0.10.31",
+    "onnxruntime>=1.23.2",
+    "opencv-python-headless>=4.12.0.88",
+    "pydantic-extra-types>=2.11.0",
+    "pydantic-settings>=2.12.0",
+    "python-dotenv>=1.2.1",
+    "python-multipart==0.0.22",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "pytest>=9.0.2",
+    "ruff>=0.14.11",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
