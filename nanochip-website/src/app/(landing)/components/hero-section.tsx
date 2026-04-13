@@ -1,5 +1,6 @@
 'use client';
 
+import { motion, AnimatePresence } from 'framer-motion';
 import { Layers, Server } from 'lucide-react';
 import Link from 'next/link';
 import HeroScene from '@/components/HeroScene';
