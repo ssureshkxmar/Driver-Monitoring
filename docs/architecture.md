@@ -2,7 +2,7 @@
 
 ## System overview
 
-Manobela is a driver monitoring system with two primary components:
+Nanochip is a driver monitoring system with two primary components:
 
 - Backend: FastAPI service that handles WebRTC signaling and video processing.
 - Mobile app: Expo React Native app that captures camera video and displays results.

@@ -11,16 +11,31 @@ ehthumbs.db
 !.vscode/settings.json
 !.vscode/extensions.json
 
-# Environment / Secrets
-.env
-.env.local
-.env.*.local
-!.env.example
-
 # Logs / Temporary
 *.log
 logs/
 log/
 tmp/
 temp/
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.*
+
+# Next.js / Build outputs
+.next/
+out/
+build/
+dist/
+
+# Env / Secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# OS Files
+.DS_Store
+Thumbs.db
 

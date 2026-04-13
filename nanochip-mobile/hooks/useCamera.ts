@@ -1,0 +1,57 @@
+import { useEffect, useRef, useState } from 'react';
+import { mediaDevices, MediaStream } from 'react-native-webrtc';
+import { Constraints } from 'react-native-webrtc/lib/typescript/getUserMedia';
+
+interface UseCameraReturn {
+  localStream: MediaStream | null;
+}
+
+/**
+ * Initializes the front-facing camera and exposes a MediaStream.
+ */
+export function useCamera(): UseCameraReturn {
+  const [localStream, setLocalStream] = useState<MediaStream | null>(null);
+  const streamRef = useRef<MediaStream | null>(null);
+
+  useEffect(() => {
+    let active = true;
+
+    async function initCamera() {
+      try {
+        // Constraints for camera
+        const constraints: Constraints = {
+          audio: false, // no audio
+          video: {
+            facingMode: 'user', // front camera
+            width: { ideal: 480, max: 640 },
+            height: { ideal: 320, max: 480 },
+            frameRate: { ideal: 15, max: 24 },
+          },
+        };
+
+        const stream = await mediaDevices.getUserMedia(constraints);
+
+        if (!active) {
+          stream.getTracks().forEach((t) => t.stop());
+          return;
+        }
+
+        streamRef.current = stream;
+        setLocalStream(stream);
+      } catch (err) {
+        console.error('Failed to get camera', err);
+      }
+    }
+
+    initCamera();
+
+    // Stop all tracks when the component unmounts
+    return () => {
+      active = false;
+      streamRef.current?.getTracks().forEach((t) => t.stop());
+      streamRef.current = null;
+    };
+  }, []);
+
+  return { localStream };
+}

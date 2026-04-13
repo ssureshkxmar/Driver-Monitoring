@@ -2,7 +2,7 @@
 
 ## Overview
 
-You can self-host the Manobela backend on your own infrastructure – a personal computer, Raspberry Pi, VPS, or any machine that can run Python and FastAPI.
+You can self-host the Nanochip backend on your own infrastructure – a personal computer, Raspberry Pi, VPS, or any machine that can run Python and FastAPI.
 
 ## Requirements
 
@@ -24,19 +24,19 @@ Follow [backend setup](backend/setup.md) to install and configure the backend. M
 
 ### systemd (Linux)
 
-Create `/etc/systemd/system/manobela.service`:
+Create `/etc/systemd/system/nanochip.service`:
 
 ```ini
 [Unit]
-Description=Manobela Backend
+Description=Nanochip Backend
 After=network.target
 
 [Service]
 Type=simple
 User=<your-user>
-WorkingDirectory=/path/to/manobela/backend
-Environment="PATH=/path/to/manobela/backend/.venv/bin"
-ExecStart=/path/to/manobela/backend/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+WorkingDirectory=/path/to/nanochip/backend
+Environment="PATH=/path/to/nanochip/backend/.venv/bin"
+ExecStart=/path/to/nanochip/backend/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
 Restart=always
 
 [Install]
@@ -46,14 +46,14 @@ WantedBy=multi-user.target
 Enable and start:
 
 ```sh
-sudo systemctl enable manobela
-sudo systemctl start manobela
+sudo systemctl enable nanochip
+sudo systemctl start nanochip
 ```
 
 ### PM2 (Cross-platform)
 
 ```sh
-pm2 start run.py --name manobela --interpreter python3
+pm2 start run.py --name nanochip --interpreter python3
 pm2 save
 pm2 startup
 ```
