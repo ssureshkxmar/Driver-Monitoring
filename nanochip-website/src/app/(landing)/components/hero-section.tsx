@@ -1,8 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Play, X as CloseIcon, Layers, Server } from 'lucide-react';
+import { Layers, Server } from 'lucide-react';
 import Link from 'next/link';
 import HeroScene from '@/components/HeroScene';
 
@@ -11,31 +9,25 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ mousePosition }: HeroSectionProps) {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Layers */}
+      {/* Persistent Background Video */}
       <div className="absolute inset-0 z-0">
-        {!isVideoPlaying ? (
-          <HeroScene mousePosition={mousePosition} />
-        ) : (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="w-full h-full"
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover brightness-50"
-              src="/main-background.mp4"
-            />
-          </motion.div>
-        )}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover brightness-[0.4]"
+          src="/nx_hero_video.mp4"
+        />
+      </div>
+
+      {/* Hero Scene Overlay */}
+      <div className="absolute inset-0 z-[1] opacity-60">
+        <HeroScene mousePosition={mousePosition} />
       </div>
 
       <div className="container mx-auto px-6 text-center z-10">
@@ -77,31 +69,6 @@ export function HeroSection({ mousePosition }: HeroSectionProps) {
         </motion.div>
       </div>
 
-      {/* Video Toggle Button */}
-      <div className="absolute right-10 md:right-20 top-1/2 -translate-y-1/2 z-30">
-        <motion.div
-          animate={{
-            boxShadow: [
-              "0 0 30px rgba(45,212,191,0.2)",
-              "0 0 60px rgba(45,212,191,0.4)",
-              "0 0 30px rgba(45,212,191,0.2)",
-            ],
-          }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="rounded-full p-1"
-        >
-          <button
-            onClick={() => setIsVideoPlaying(!isVideoPlaying)}
-            className="w-16 h-16 md:w-24 md:h-24 rounded-full flex items-center justify-center transition-all duration-700 bg-[#02040a]/80 backdrop-blur-3xl border-2 border-[#2dd4bf]/40 hover:border-[#2dd4bf] group"
-          >
-            {isVideoPlaying ? (
-              <CloseIcon size={28} className="text-[#2dd4bf]" />
-            ) : (
-              <Play size={28} className="text-[#2dd4bf] ml-1" />
-            )}
-          </button>
-        </motion.div>
-      </div>
     </section>
   );
 }
