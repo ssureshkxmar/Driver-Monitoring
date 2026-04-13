@@ -45,10 +45,10 @@ export function LandingPageContent() {
     };
   }, []);
 
-  if (!mounted) return <div className="min-h-screen bg-[#02040a]" />;
+  if (!mounted) return <div className="min-h-screen bg-[#02040a]" suppressHydrationWarning />;
 
   return (
-    <div className="min-h-screen bg-[#02040a] text-white selection:bg-[#2dd4bf] selection:text-[#02040a] relative font-outfit">
+    <div className="min-h-screen bg-[#02040a] text-white selection:bg-[#2dd4bf] selection:text-[#02040a] relative font-outfit" suppressHydrationWarning>
       {/* Background Star Layer - The "Glittering" effect from Projexa */}
       {/* Higher z-index and varied sizes for more impact */}
       <div className="fixed inset-0 pointer-events-none z-[50]">

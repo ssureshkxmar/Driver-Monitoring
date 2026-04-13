@@ -11,6 +11,7 @@ import { SettingsProvider } from '@/hooks/useSettings';
 import { DatabaseProvider } from '@/components/database-provider';
 import { InsightRefreshProvider } from '@/hooks/useInsightsRefresh';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { TermsModal } from '@/components/TermsModal';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -31,6 +32,7 @@ export default function RootLayout() {
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
               </Stack>
               <PortalHost />
+              <TermsModal />
             </GestureHandlerRootView>
           </ThemeProvider>
         </InsightRefreshProvider>
