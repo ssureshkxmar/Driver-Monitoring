@@ -46,6 +46,8 @@ PROCESSING_TIMEOUT_SEC = 5 * 60
 RATE_LIMIT_WINDOW_SEC = 60
 ALLOWED_VIDEO_EXTENSIONS = {".mp4", ".mov"}
 _last_upload_by_ip: dict[str, float] = {}
+_latest_location: dict[str, any] = {}
+
 
 
 class ConnectionsResponse(BaseModel):
@@ -57,6 +59,13 @@ class ConnectionsResponse(BaseModel):
     )
     data_channels: int = Field(..., description="Number of active WebRTC DataChannels")
     frame_tasks: int = Field(..., description="Number of active frame-processing tasks")
+
+
+class LocationUpdate(BaseModel):
+    latitude: float = Field(..., description="Current latitude")
+    longitude: float = Field(..., description="Current longitude")
+    address: str | None = Field(None, description="Optional reverse-geocoded address")
+
 
 
 @router.get(
@@ -127,6 +136,34 @@ async def iot_driver_state(
         # ── Phone ──
         "phone_detected": phone.get("phone_usage", False),
     }
+
+
+@router.post(
+    "/iot/location",
+    summary="Update current location from mobile app",
+    description="Stores the latest GPS coordinates from the app for retrieval by IoT devices.",
+)
+async def update_location(update: LocationUpdate):
+    global _latest_location
+    _latest_location = {
+        "latitude": update.latitude,
+        "longitude": update.longitude,
+        "address": update.address,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+    }
+    return {"status": "success"}
+
+
+@router.get(
+    "/iot/location",
+    summary="Get the latest location for IoT devices",
+    description="Returns the most recent coordinates stored by the mobile app.",
+)
+async def get_latest_location():
+    if not _latest_location:
+        raise HTTPException(status_code=404, detail="No location data available")
+    return _latest_location
+
 
 
 @router.websocket("/ws/driver-monitoring")

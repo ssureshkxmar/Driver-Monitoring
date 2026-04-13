@@ -12,6 +12,7 @@ import { DatabaseProvider } from '@/components/database-provider';
 import { InsightRefreshProvider } from '@/hooks/useInsightsRefresh';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { TermsModal } from '@/components/TermsModal';
+import { useLocationSync } from '@/hooks/useLocationSync';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -20,6 +21,7 @@ export {
 
 export default function RootLayout() {
   const { colorScheme } = useColorScheme();
+  useLocationSync();
 
   return (
     <DatabaseProvider>
