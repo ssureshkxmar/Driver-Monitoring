@@ -21,6 +21,7 @@ type MediaStreamViewProps = {
   style?: object;
   mirror?: boolean;
   hasCamera: boolean;
+  cameraError?: string | null;
   onToggle: () => void;
   onRecalibrateHeadPose?: () => void;
   recalibrateEnabled?: boolean;
@@ -37,6 +38,7 @@ export const MediaStreamView = ({
   style,
   mirror = true,
   hasCamera,
+  cameraError,
   onToggle,
   onRecalibrateHeadPose,
   recalibrateEnabled = true,
@@ -101,6 +103,16 @@ export const MediaStreamView = ({
   const recalibrateActive = canRecalibrate && recalibrateEnabled;
 
   if (!stream) {
+    // Determine what message to show
+    let statusMessage = 'Initializing camera...';
+    if (cameraError) {
+      statusMessage = cameraError;
+    } else if (hasCamera) {
+      statusMessage = 'Camera ready. Tap to start monitoring.';
+    } else if (sessionState === 'starting') {
+      statusMessage = 'Connecting to server...';
+    }
+
     return (
       <View
         style={[
@@ -109,21 +121,23 @@ export const MediaStreamView = ({
         ]}
       >
         {/* Camera placeholder icon */}
-        <View className="mb-6 items-center">
+        <View className="mb-6 items-center px-4">
           <View className="h-20 w-20 rounded-full bg-white/10 items-center justify-center mb-3">
-            <UserIcon size={40} color="rgba(255,255,255,0.4)" />
+            <UserIcon size={40} color={cameraError ? 'rgba(239,68,68,0.6)' : 'rgba(255,255,255,0.4)'} />
           </View>
-          <Text className="text-white/40 text-sm text-center">
-            {sessionState === 'starting' ? 'Starting camera...' : 'Tap to start monitoring'}
+          <Text className={`text-sm text-center ${cameraError ? 'text-red-400' : 'text-white/40'}`}>
+            {statusMessage}
           </Text>
         </View>
 
-        {/* Record button — always visible */}
-        <CameraRecordButton
-          isRecording={false}
-          disabled={sessionState === 'starting' || sessionState === 'stopping'}
-          onPress={onToggle}
-        />
+        {/* Record button — disabled if no camera */}
+        {!cameraError && (
+          <CameraRecordButton
+            isRecording={false}
+            disabled={!hasCamera || sessionState === 'starting' || sessionState === 'stopping'}
+            onPress={onToggle}
+          />
+        )}
 
         {/* Spinner during starting */}
         {(sessionState === 'starting' || sessionState === 'stopping') && (

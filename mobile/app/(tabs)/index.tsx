@@ -55,7 +55,7 @@ export default function MonitorScreen() {
     return baseUrl ? `${baseUrl}/driver-monitoring` : '';
   }, [settings.wsBaseUrl]);
 
-  const { localStream } = useCamera();
+  const { localStream, cameraError } = useCamera();
 
   const {
     sessionState,
@@ -189,6 +189,7 @@ export default function MonitorScreen() {
           sessionDurationMs={sessionDurationMs}
           inferenceData={inferenceData}
           hasCamera={hasCamera}
+          cameraError={cameraError}
           onToggle={handleToggle}
           onRecalibrateHeadPose={recalibrateHeadPose}
           recalibrateEnabled={canRecalibrate}

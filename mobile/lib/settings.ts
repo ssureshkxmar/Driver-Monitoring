@@ -10,7 +10,7 @@ export type Settings = {
   enableAutoCoordination: boolean;
 };
 
-const SETTINGS_KEY = 'app-settings';
+const SETTINGS_KEY = 'elevium-settings-v2';
 
 const DEFAULT_API_BASE = 'http://3.109.184.184:8000';
 const DEFAULT_WS_BASE = 'ws://3.109.184.184:8000/ws';
