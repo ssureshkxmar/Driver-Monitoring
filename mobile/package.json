@@ -91,10 +91,5 @@
   "private": true,
   "overrides": {
     "@expo/config-plugins": "~8.0.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "@expo/config-plugins": "~8.0.8"
-    }
   }
 }
