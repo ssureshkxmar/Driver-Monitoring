@@ -15,9 +15,6 @@
       "android": {
         "buildType": "apk"
       },
-      "env": {
-        "NODE_VERSION": "20.12.2"
-      },
       "autoIncrement": true
     },
     "store": {
