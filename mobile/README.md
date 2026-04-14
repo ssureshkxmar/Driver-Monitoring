@@ -1,6 +1,6 @@
 # Mobile
 
-Landing page for the Nanochip driver monitoring project.
+Landing page for the Elevium driver monitoring project.
 
 ## Development
 

@@ -19,7 +19,7 @@ export const TermsModal = () => {
 
   const checkTerms = async () => {
     try {
-      const accepted = await AsyncStorage.getItem('nanochip_terms_accepted');
+      const accepted = await AsyncStorage.getItem('elevium_terms_accepted');
       if (!accepted) {
         setVisible(true);
       }
@@ -31,8 +31,8 @@ export const TermsModal = () => {
 
   const handleAccept = async () => {
     try {
-      await AsyncStorage.getItem('nanochip_terms_accepted');
-      await AsyncStorage.setItem('nanochip_terms_accepted', 'true');
+      await AsyncStorage.getItem('elevium_terms_accepted');
+      await AsyncStorage.setItem('elevium_terms_accepted', 'true');
       setVisible(false);
     } catch (e) {
       console.error('Failed to save terms status', e);
@@ -55,14 +55,14 @@ export const TermsModal = () => {
                 <Text style={styles.badgeText}>HACKATHON PROTOTYPE</Text>
               </View>
               <Text style={styles.modalTitle}>Terms & Conditions</Text>
-              <Text style={styles.modalSubtitle}>Please review the terms of use for Nanochip.</Text>
+              <Text style={styles.modalSubtitle}>Please review the terms of use for Elevium.</Text>
             </View>
 
             <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>1. Prototype Disclaimer</Text>
                 <Text style={styles.text}>
-                  Nanochip is an experimental prototype developed for a hackathon. It is intended for 
+                  Elevium is an experimental prototype developed for a hackathon. It is intended for 
                   testing and demonstration only. Features are part of a conceptual framework.
                 </Text>
               </View>

@@ -8,8 +8,8 @@ import { Separator } from '@/components/ui/separator';
 import { DownloadIcon } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Download Nanochip',
-  description: 'Download the latest Nanochip mobile app.',
+  title: 'Download Elevium',
+  description: 'Download the latest Elevium mobile app.',
   keywords: ['mobile', 'app', 'download'],
 };
 
@@ -82,7 +82,7 @@ export default async function DownloadPage() {
         <div className="max-w-3xl mx-auto">
           {/* Download Section */}
           <section className="text-center">
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Download Nanochip</h1>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Download Elevium</h1>
             <p className="mt-3 text-base md:text-lg text-muted-foreground">
               Get the latest version of the mobile app for Android and iOS.
             </p>

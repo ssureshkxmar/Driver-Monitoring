@@ -2,7 +2,7 @@
 
 **Last updated:** January 2026
 
-This Privacy Policy explains how **Nanochip** (“we,” “us,” or “our”) collects, uses, and protects information when you use our mobile application **Nanochip** (“App”). By downloading, installing, or using the App, you agree to this Privacy Policy.
+This Privacy Policy explains how **Elevium** (“we,” “us,” or “our”) collects, uses, and protects information when you use our mobile application **Elevium** (“App”). By downloading, installing, or using the App, you agree to this Privacy Policy.
 
 If you do not agree with this Privacy Policy, do not use the App.
 

@@ -38,7 +38,7 @@ export function HeroSection({ mousePosition }: HeroSectionProps) {
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         >
           <h1 className="text-4xl sm:text-6xl md:text-[8rem] font-black leading-[0.8] tracking-tighter mb-10 text-white italic drop-shadow-2xl">
-            NANOCHIP<br />
+            ELEVIUM<br />
             <span className="text-[#2dd4bf] drop-shadow-[0_0_15px_rgba(45,212,191,0.8)]">
               DRIVER SAFETY
             </span>

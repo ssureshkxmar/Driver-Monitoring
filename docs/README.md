@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder contains reference and setup documentation for the Nanochip project.
+This folder contains reference and setup documentation for the Elevium project.
 
 ## Contents
 

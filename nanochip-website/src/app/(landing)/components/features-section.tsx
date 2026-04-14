@@ -60,7 +60,7 @@ export function FeaturesSection() {
             Safety that reacts in real time
           </h2>
           <p className="text-muted-foreground text-base">
-            Nanochip monitors driver behavior instantly, alerts unsafe actions immediately, works on
+            Elevium monitors driver behavior instantly, alerts unsafe actions immediately, works on
             any phone, and ensures your data stays private.
           </p>
         </div>
@@ -70,7 +70,7 @@ export function FeaturesSection() {
           {/* Left Image */}
           <Image
             src="/feature-1.png"
-            alt="Nanochip Feature 1"
+            alt="Elevium Feature 1"
             width={800}
             height={800}
             sizes="100vw"
@@ -106,7 +106,7 @@ export function FeaturesSection() {
               Tools for deeper insights and flexibility
             </h3>
             <p className="text-muted-foreground text-base text-pretty">
-              Beyond real-time monitoring, Nanochip helps drivers analyze past sessions, navigate
+              Beyond real-time monitoring, Elevium helps drivers analyze past sessions, navigate
               routes efficiently, upload external videos for review, and configure alerts and
               monitoring preferences.
             </p>
@@ -131,7 +131,7 @@ export function FeaturesSection() {
           {/* Right Image */}
           <Image
             src="/feature-2.png"
-            alt="Nanochip Feature 2"
+            alt="Elevium Feature 2"
             width={800}
             height={800}
             sizes="100vw"

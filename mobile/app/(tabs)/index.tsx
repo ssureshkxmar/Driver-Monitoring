@@ -176,7 +176,7 @@ export default function MonitorScreen() {
 
   return (
     <ScrollView className="flex-1 px-2 py-1">
-      <Stack.Screen options={{ title: 'Nanochip Monitor' }} />
+      <Stack.Screen options={{ title: 'Elevium Monitor' }} />
 
       <ConnectionStatus sessionState={sessionState} clientId={clientId} error={error} />
 

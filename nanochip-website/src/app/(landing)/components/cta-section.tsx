@@ -28,7 +28,7 @@ export function CTASection() {
                 </h1>
 
                 <p className="text-muted-foreground mx-auto max-w-2xl text-balance lg:text-xl">
-                  Nanochip monitors driver behavior in real time using only a phone camera. Get
+                  Elevium monitors driver behavior in real time using only a phone camera. Get
                   alerts for distraction and drowsiness with no extra hardware and no cost for now.
                 </p>
               </div>

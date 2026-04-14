@@ -40,10 +40,10 @@ export function AboutSection() {
         {/* Section Header */}
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">
-            Introducing Nanochip
+            Introducing Elevium
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Nanochip is a driver monitoring system that detects unsafe behaviors using only a
+            Elevium is a driver monitoring system that detects unsafe behaviors using only a
             smartphone camera.
           </p>
         </div>

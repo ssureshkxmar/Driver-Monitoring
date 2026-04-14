@@ -15,7 +15,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { TermsModal } from '@/components/terms-modal';
 
 export const metadata: Metadata = {
-  title: 'Nanochip',
+  title: 'Elevium',
   description: 'A driver monitoring system in your phone.',
 };
 

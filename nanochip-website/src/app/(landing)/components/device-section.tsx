@@ -31,7 +31,7 @@ export function DeviceSection() {
               >
                 <Image 
                   src="/assets/device/device-1.png" 
-                  alt="Nanochip Hardware Setup" 
+                  alt="Elevium Hardware Setup" 
                   width={600} 
                   height={800} 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
@@ -70,7 +70,7 @@ export function DeviceSection() {
                 <span className="text-[#2dd4bf] drop-shadow-[0_0_15px_rgba(45,212,191,0.5)]">INTELLIGENCE</span>
               </h2>
               <p className="mt-6 text-white/50 text-base leading-relaxed max-w-lg italic">
-                The Nanochip hardware unit leverages the STM32 Nucleo ecosystem to provide a low-latency bridge between vehicle sensors and our AI vision model. It manages local alerts, LCD feedback, and power-efficient monitoring.
+                The Elevium hardware unit leverages the STM32 Nucleo ecosystem to provide a low-latency bridge between vehicle sensors and our AI vision model. It manages local alerts, LCD feedback, and power-efficient monitoring.
               </p>
             </div>
 

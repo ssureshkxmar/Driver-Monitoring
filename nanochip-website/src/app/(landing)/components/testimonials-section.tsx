@@ -16,14 +16,14 @@ const testimonials: Testimonial[] = [
     name: 'Alex',
     role: 'Ride-share Driver',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=male-1',
-    quote: 'Nanochip helps me stay focused during long shifts. The alerts are clear and timely.',
+    quote: 'Elevium helps me stay focused during long shifts. The alerts are clear and timely.',
   },
   {
     name: 'Mia',
     role: 'Fleet Manager',
     image: 'https://notion-avatars.netlify.app/api/avatar?preset=female-2',
     quote:
-      'We started using Nanochip for safety monitoring. It’s easy to deploy and works on any phone.',
+      'We started using Elevium for safety monitoring. It’s easy to deploy and works on any phone.',
   },
   {
     name: 'Noah',

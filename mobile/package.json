@@ -2,7 +2,7 @@
   "name": "nanochip-mobile",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  "description": "Nanochip - Smart Driver AI Monitoring App",
+  "description": "Elevium - Smart Driver AI Monitoring App",
   "scripts": {
     "dev": "expo start",
     "android": "expo run:android",

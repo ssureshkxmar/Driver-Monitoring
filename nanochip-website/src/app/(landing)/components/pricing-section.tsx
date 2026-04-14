@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 
 const plan = {
   name: 'Free for Everyone',
-  description: 'Full access to Nanochip at no cost while we build and improve the system.',
+  description: 'Full access to Elevium at no cost while we build and improve the system.',
   features: [
     'Real-time driver monitoring',
     'Safety alerts and reminders',
@@ -30,7 +30,7 @@ export function PricingSection() {
             Free for all—no catch
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Nanochip is currently available at no cost for everyone. Use it freely as we continue to
+            Elevium is currently available at no cost for everyone. Use it freely as we continue to
             improve the system.
           </p>
         </div>

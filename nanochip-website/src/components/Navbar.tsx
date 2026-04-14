@@ -29,7 +29,7 @@ export const Navbar = () => {
           {/* Logo - Top Left */}
           <div className="flex justify-start">
             <Link href="/" className="text-2xl font-black text-white tracking-tighter uppercase italic">
-              Nanochip<span className="text-[#2dd4bf]">.</span>
+              Elevium<span className="text-[#2dd4bf]">.</span>
             </Link>
           </div>
           

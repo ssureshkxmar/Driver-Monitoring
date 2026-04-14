@@ -17,14 +17,14 @@ export function TermsModal() {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
-    const hasAccepted = localStorage.getItem('nanochip-terms-accepted');
+    const hasAccepted = localStorage.getItem('elevium-terms-accepted');
     if (!hasAccepted) {
       setOpen(true);
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('nanochip-terms-accepted', 'true');
+    localStorage.setItem('elevium-terms-accepted', 'true');
     setOpen(false);
   };
 
@@ -42,7 +42,7 @@ export function TermsModal() {
           </div>
           <DialogTitle className="text-2xl font-bold tracking-tight">Terms & Conditions</DialogTitle>
           <DialogDescription className="text-muted-foreground mt-1">
-            Please review the terms of use for the Nanochip Hackathon Project.
+            Please review the terms of use for the Elevium Hackathon Project.
           </DialogDescription>
         </DialogHeader>
 
@@ -54,7 +54,7 @@ export function TermsModal() {
                 Hackathon Disclaimer
               </h3>
               <p>
-                Nanochip is currently a prototype developed for a hackathon. It is intended for demonstration 
+                Elevium is currently a prototype developed for a hackathon. It is intended for demonstration 
                 and testing purposes only. The features provided are part of a conceptual framework 
                 and may not represent a final, production-ready product.
               </p>
@@ -68,7 +68,7 @@ export function TermsModal() {
               <p>
                 This application is a Driver Monitoring System (DMS) prototype. 
                 <strong className="text-foreground mx-1">NEVER</strong> rely on this application to keep you safe while driving. 
-                Always maintain full attention on the road. The creators of Nanochip are not responsible for 
+                Always maintain full attention on the road. The creators of Elevium are not responsible for 
                 any accidents or incidents occurring while using this software.
               </p>
             </section>
@@ -93,7 +93,7 @@ export function TermsModal() {
               </h3>
               <p>
                 This project is open-source for the duration of the hackathon evaluation. 
-                All rights to the unique algorithms and design language are reserved by the Nanochip team.
+                All rights to the unique algorithms and design language are reserved by the Elevium team.
               </p>
             </section>
           </div>

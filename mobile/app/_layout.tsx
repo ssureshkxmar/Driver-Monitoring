@@ -19,25 +19,31 @@ export {
   ErrorBoundary,
 } from 'expo-router';
 
+function SyncWrapper({ children }: { children: React.ReactNode }) {
+  useLocationSync();
+  return <>{children}</>;
+}
+
 export default function RootLayout() {
   const { colorScheme } = useColorScheme();
-  useLocationSync();
 
   return (
     <DatabaseProvider>
       <SettingsProvider>
-        <InsightRefreshProvider>
-          <ThemeProvider value={NAV_THEME[colorScheme ?? 'light'] as any}>
-            <GestureHandlerRootView style={{ flex: 1 }}>
-              <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
-              <Stack>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-              </Stack>
-              <PortalHost />
-              <TermsModal />
-            </GestureHandlerRootView>
-          </ThemeProvider>
-        </InsightRefreshProvider>
+        <SyncWrapper>
+          <InsightRefreshProvider>
+            <ThemeProvider value={NAV_THEME[colorScheme ?? 'light'] as any}>
+              <GestureHandlerRootView style={{ flex: 1 }}>
+                <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
+                <Stack>
+                  <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                </Stack>
+                <PortalHost />
+                <TermsModal />
+              </GestureHandlerRootView>
+            </ThemeProvider>
+          </InsightRefreshProvider>
+        </SyncWrapper>
       </SettingsProvider>
     </DatabaseProvider>
   );

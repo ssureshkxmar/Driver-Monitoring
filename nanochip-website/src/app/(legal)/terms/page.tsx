@@ -6,8 +6,8 @@ import { LandingNavbar } from '@/components/navbar';
 import { LandingFooter } from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Nanochip',
-  description: 'Terms of Service for Nanochip.',
+  title: 'Terms of Service | Elevium',
+  description: 'Terms of Service for Elevium.',
 };
 
 export default function TermsOfServices() {

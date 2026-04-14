@@ -69,7 +69,7 @@ export function ContactSection() {
             Need help or have questions?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our team is here to help you get the most out of Nanochip. Choose the best way to reach
+            Our team is here to help you get the most out of Elevium. Choose the best way to reach
             out to us.
           </p>
         </div>

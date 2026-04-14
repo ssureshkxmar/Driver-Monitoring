@@ -41,7 +41,7 @@ const team = [
     name: 'GURU ASHOKAN',
     regNo: '9923005197',
     role: 'Full Stack Developer',
-    description: 'Crafting responsive user interfaces and robust backend protocols for the Nanochip ecosystem.',
+    description: 'Crafting responsive user interfaces and robust backend protocols for the Elevium ecosystem.',
     image: '/assets/team/guru.png',
     fallback: 'GA',
     social: {
@@ -73,7 +73,7 @@ export function TeamSection() {
         {/* Section Header */}
         <div className="mx-auto max-w-4xl text-center mb-16">
           <Badge variant="outline" className="mb-4 border-[#2dd4bf]/20 text-[#2dd4bf] bg-[#2dd4bf]/5">
-            Nanochip Intelligence
+            Elevium Intelligence
           </Badge>
           <h2 className="text-4xl font-black tracking-tight sm:text-5xl mb-6 italic text-white">
             THE <span className="text-[#2dd4bf]">ARCHITECTS</span>

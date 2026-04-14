@@ -57,7 +57,7 @@ export function LandingNavbar() {
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2 cursor-pointer">
             <Logo size={32} />
-            <span className="font-bold">Nanochip</span>
+            <span className="font-bold">Elevium</span>
           </Link>
         </div>
 
@@ -130,7 +130,7 @@ export function LandingNavbar() {
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Logo size={16} />
                   </div>
-                  <SheetTitle className="text-lg font-semibold">Nanochip</SheetTitle>
+                  <SheetTitle className="text-lg font-semibold">Elevium</SheetTitle>
                   <div className="ml-auto flex items-center gap-1">
                     <Button variant="ghost" size="icon" asChild className="cursor-pointer">
                       <a

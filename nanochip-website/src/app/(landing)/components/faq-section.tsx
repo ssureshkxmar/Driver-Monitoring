@@ -19,15 +19,15 @@ type FaqItem = {
 const faqItems: FaqItem[] = [
   {
     value: 'item-1',
-    question: 'What is Nanochip?',
+    question: 'What is Elevium?',
     answer:
-      'Nanochip is a real-time driver monitoring system that detects unsafe driving behaviors using only a smartphone camera.',
+      'Elevium is a real-time driver monitoring system that detects unsafe driving behaviors using only a smartphone camera.',
   },
   {
     value: 'item-2',
     question: 'How does it work?',
     answer:
-      'The app streams video from your phone to a secure server for analysis. When unsafe behavior is detected, Nanochip sends an immediate alert.',
+      'The app streams video from your phone to a secure server for analysis. When unsafe behavior is detected, Elevium sends an immediate alert.',
   },
   {
     value: 'item-3',
@@ -39,13 +39,13 @@ const faqItems: FaqItem[] = [
     value: 'item-4',
     question: 'Is my data collected or stored?',
     answer:
-      'No. Nanochip is designed with privacy in mind. We do not store personal data or track drivers. Only the minimal signals needed for safety are processed.',
+      'No. Elevium is designed with privacy in mind. We do not store personal data or track drivers. Only the minimal signals needed for safety are processed.',
   },
   {
     value: 'item-5',
-    question: 'Is Nanochip free?',
+    question: 'Is Elevium free?',
     answer:
-      'Yes. Nanochip is currently free for all users while we continue to improve the system.',
+      'Yes. Elevium is currently free for all users while we continue to improve the system.',
   },
 ];
 
@@ -62,7 +62,7 @@ const FaqSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about Nanochip. Still have questions? We&apos;re here to
+            Everything you need to know about Elevium. Still have questions? We&apos;re here to
             help.
           </p>
         </div>

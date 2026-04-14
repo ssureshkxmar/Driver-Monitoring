@@ -53,7 +53,7 @@ export default function SettingsScreen() {
   const { settings, saveSettings } = useSettings();
 
   const isDarkMode = colorScheme === 'dark';
-  const appName = Constants.expoConfig?.name ?? 'Nanochip';
+  const appName = Constants.expoConfig?.name ?? 'Elevium';
   const appVersion = Constants.expoConfig?.version ?? '1.0.0';
 
   const aboutValue = useMemo(() => `${appName} • v${appVersion}`, [appName, appVersion]);

@@ -52,7 +52,7 @@ export default function GuideScreen() {
 
       <Card className="mb-6">
         <CardHeader>
-          <CardTitle className="text-xl">Welcome to Nanochip</CardTitle>
+          <CardTitle className="text-xl">Welcome to Elevium</CardTitle>
           <CardDescription>
             Your driver monitoring assistant. Learn how the app works, what each metric means, and
             best practices for safe driving.

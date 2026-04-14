@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # Application
-    app_name: str = "Nanochip API"
+    app_name: str = "Elevium API"
     environment: str = "development"
 
     # CORS

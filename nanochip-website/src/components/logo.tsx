@@ -14,7 +14,7 @@ export function Logo({ size = 24, className }: LogoProps) {
     >
       <Image
         src="/logo.png"
-        alt="Nanochip Logo"
+        alt="Elevium Logo"
         width={size}
         height={size}
         className="object-contain"

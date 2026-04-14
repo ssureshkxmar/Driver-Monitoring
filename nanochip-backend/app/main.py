@@ -16,7 +16,7 @@ def create_app() -> FastAPI:
 
     app = FastAPI(
         title=settings.app_name,
-        description="API for the Nanochip app",
+        description="API for the Elevium app",
         lifespan=lifespan,
         license_info={
             "name": "Apache 2.0",

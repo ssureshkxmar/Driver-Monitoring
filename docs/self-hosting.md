@@ -2,7 +2,7 @@
 
 ## Overview
 
-You can self-host the Nanochip backend on your own infrastructure – a personal computer, Raspberry Pi, VPS, or any machine that can run Python and FastAPI.
+You can self-host the Elevium backend on your own infrastructure – a personal computer, Raspberry Pi, VPS, or any machine that can run Python and FastAPI.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Create `/etc/systemd/system/nanochip.service`:
 
 ```ini
 [Unit]
-Description=Nanochip Backend
+Description=Elevium Backend
 After=network.target
 
 [Service]

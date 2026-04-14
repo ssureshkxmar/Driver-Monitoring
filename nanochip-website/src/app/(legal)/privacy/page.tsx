@@ -6,8 +6,8 @@ import { LandingNavbar } from '@/components/navbar';
 import { LandingFooter } from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Nanochip',
-  description: 'Privacy Policy for Nanochip.',
+  title: 'Privacy Policy | Elevium',
+  description: 'Privacy Policy for Elevium.',
 };
 
 export default function PrivacyPolicy() {
