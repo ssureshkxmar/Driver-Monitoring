@@ -13,7 +13,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
@@ -22,7 +24,8 @@
         "NSLocationWhenInUseUsageDescription": "This app needs access to your location to show your current position on the map and calculate routes.",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to your location to show your current position on the map and calculate routes."
       },
-      "bitcode": false
+      "bitcode": false,
+      "bundleIdentifier": "com.elevium.drivermonitor"
     },
     "android": {
       "package": "com.elevium.drivermonitor",
@@ -62,7 +65,11 @@
         {
           "android": {
             "minSdkVersion": 26,
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": true,
+            "kotlinVersion": "1.9.23",
+            "extraParams": {
+              "org.gradle.jvmargs": "-Xmx3072m -XX:MaxMetaspaceSize=512m"
+            }
           }
         }
       ],
@@ -74,7 +81,9 @@
         }
       ],
       "expo-secure-store",
-      ["expo-osm-sdk/plugin"],
+      [
+        "expo-osm-sdk/plugin"
+      ],
       [
         "expo-location",
         {
