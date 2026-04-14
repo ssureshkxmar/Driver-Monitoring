@@ -3,7 +3,7 @@ import { Alert } from 'react-native';
 import { useEffect, useRef, useState } from 'react';
 
 import * as ImagePicker from 'expo-image-picker';
-import * as FileSystem from 'expo-file-system/legacy';
+import * as FileSystem from 'expo-file-system';
 
 import type { SelectedVideo, VideoProcessingResponse } from '@/types/video';
 import { sessionLogger } from '@/services/logging/session-logger';
