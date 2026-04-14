@@ -3,16 +3,15 @@ import { useLocation } from './maps/useLocation';
 
 const SYNC_INTERVAL_MS = 10_000; // Sync every 10 seconds
 
-// Read API base from env only — no context dependency, cannot crash
-const API_BASE = process.env.EXPO_PUBLIC_API_BASE ?? '';
+// Production server fallback — works even if .env is not configured
+const PRODUCTION_API = 'http://3.109.184.184:8000';
+const API_BASE = process.env.EXPO_PUBLIC_API_BASE ?? PRODUCTION_API;
 
 export const useLocationSync = () => {
   const { getLocation } = useLocation();
   const lastSyncRef = useRef<number>(0);
 
   useEffect(() => {
-    if (!API_BASE) return; // No server configured, skip silently
-
     const syncLocation = async () => {
       try {
         const now = Date.now();
