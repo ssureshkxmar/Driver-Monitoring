@@ -100,7 +100,40 @@ export const MediaStreamView = ({
   const canRecalibrate = sessionState === 'active' && Boolean(onRecalibrateHeadPose);
   const recalibrateActive = canRecalibrate && recalibrateEnabled;
 
-  if (!stream) return null;
+  if (!stream) {
+    return (
+      <View
+        style={[
+          { width: '100%', aspectRatio: 9 / 16, borderRadius: 16, overflow: 'hidden', backgroundColor: '#0a0a0a', justifyContent: 'center', alignItems: 'center' },
+          style,
+        ]}
+      >
+        {/* Camera placeholder icon */}
+        <View className="mb-6 items-center">
+          <View className="h-20 w-20 rounded-full bg-white/10 items-center justify-center mb-3">
+            <UserIcon size={40} color="rgba(255,255,255,0.4)" />
+          </View>
+          <Text className="text-white/40 text-sm text-center">
+            {sessionState === 'starting' ? 'Starting camera...' : 'Tap to start monitoring'}
+          </Text>
+        </View>
+
+        {/* Record button — always visible */}
+        <CameraRecordButton
+          isRecording={false}
+          disabled={sessionState === 'starting' || sessionState === 'stopping'}
+          onPress={onToggle}
+        />
+
+        {/* Spinner during starting */}
+        {(sessionState === 'starting' || sessionState === 'stopping') && (
+          <View className="absolute inset-0 items-center justify-center bg-black/60">
+            <SpinningLogo width={40} height={40} color="white" />
+          </View>
+        )}
+      </View>
+    );
+  }
 
   return (
     <View

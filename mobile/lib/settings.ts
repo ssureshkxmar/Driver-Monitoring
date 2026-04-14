@@ -12,8 +12,8 @@ export type Settings = {
 
 const SETTINGS_KEY = 'app-settings';
 
-const DEFAULT_API_BASE = 'https://api.nanochip.site';
-const DEFAULT_WS_BASE = 'wss://api.nanochip.site/ws';
+const DEFAULT_API_BASE = 'http://3.109.184.184:8000';
+const DEFAULT_WS_BASE = 'ws://3.109.184.184:8000/ws';
 
 export const defaultSettings: Settings = {
   apiBaseUrl: process.env.EXPO_PUBLIC_API_BASE ?? DEFAULT_API_BASE,
