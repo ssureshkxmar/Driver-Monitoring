@@ -79,6 +79,8 @@
     "@types/react": "~19.1.10",
     "@types/react-native": "^0.72.8",
     "@types/uuid": "^11.0.0",
+    "ajv": "^8.18.0",
+    "ajv-keywords": "^5.1.0",
     "drizzle-kit": "^0.31.8",
     "eslint": "^9.39.2",
     "eslint-config-expo": "~10.0.0",
