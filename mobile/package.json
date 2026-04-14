@@ -88,5 +88,13 @@
     "prettier-plugin-tailwindcss": "^0.6.14",
     "typescript": "~5.9.2"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "@expo/config-plugins": "~8.0.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "@expo/config-plugins": "~8.0.8"
+    }
+  }
 }
