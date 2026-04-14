@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "Elevium",
-    "slug": "elevium",
+    "slug": "nanochip",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "elevium",
+    "scheme": "nanochip",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
