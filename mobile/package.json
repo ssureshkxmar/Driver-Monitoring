@@ -15,7 +15,7 @@
     "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
-    "@config-plugins/react-native-webrtc": "^13.0.0",
+    "@config-plugins/react-native-webrtc": "^9.0.0",
     "@expo/vector-icons": "^15.0.3",
     "@gorhom/bottom-sheet": "^5.2.8",
     "@react-native-async-storage/async-storage": "2.2.0",
